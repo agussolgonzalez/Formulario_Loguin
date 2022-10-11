@@ -1,30 +1,101 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
+*
+@import url('https://fonts.googleapis.com/css?family=Parisienne|Quicksand&display=swap');
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+}
+
+.lead {
+  font-family: 'Quicksand';
+}
+
+.header-bar {
+  position: relative;
+  width: 80%;
+  min-width: 300px;
+  height: 50px;
+  border: 10px solid transparent;
+  border-top: 10px solid rgb(255, 255, 255);
+  border-left: 10px solid rgb(255, 255, 255);
+  opacity: 0.7;
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+.header-bar::after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 30%;
+  height: 49px;
+  border: 10px solid transparent;
+  border-bottom: 10px solid rgb(255, 255, 255);
+  border-right: 10px solid rgb(255, 255, 255);
+  transition: 0.3s linear all;
+}
+
+.header-bar>.title {
+  position: absolute;
+  top: calc(50% - 20px);
+  left: 10px;
+  transform: translateY(-50%);
+  color: white;
+  font-family: 'Quicksand',sans-serif;
+  cursor: default;
+  user-select: none;
+  opacity: 1.0;
+}
+
+.slider-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+}
+
+.slider-menu>li {
+  display: inline-flex;
+  padding: 14px;
+  margin-left: 2px;
+  font-family: 'Quicksand', sans-serif;
+  color:rgb(255, 255, 255)
+  cursor: pointer;
+  transition: 0.3s linear all;
+  user-select: none;
+}
+
+.slider-menu>li:hover {
+  color: #017bab;
+  box-shadow: 0 50px 5px rgba(0, 0, 0, 0.15) inset;
+}
+
+
+
   body {
     font-family: arial;
-    background-image: url(imagenes/fondo1.jpg);
+    background-image: url(imagenes/2fondo.jpg);
     background-position: center;
     background-attachment: scroll;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:cover;
   }
   
-  #header{
-
-      padding: 50px 10px;
-      color: black;
-      text-align: center;
-      font-size: 60px;
-      font-weight: bold;
-      position:sticky;
-      top: 0;
-      width: 100%;
-
-  }
 
   .form-login {
     width: 400px;
@@ -51,7 +122,7 @@
   }
   
   .controls {
-    width: 100%;
+    width: 95%;
     border: 1px solid #017bab;
     margin-bottom: 15px;
     padding: 11px 10px;
@@ -86,3 +157,4 @@
   .form-login a:hover {
     text-decoration: underline;
   }
+
